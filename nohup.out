@@ -1,0 +1,31 @@
+FileNotFoundError: [Errno 2] No such file or directory: '/home/PF/joao.jptr/Projetos/relogio-ponto/Planilhas/751466444/2'
+2019-02-21 10:16:07,330 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/home/PF/joao.jptr/.local/lib/python3.5/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/home/PF/joao.jptr/.local/lib/python3.5/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "teste.py", line 31, in command_func
+    return func(bot, update, **kwargs)
+  File "teste.py", line 69, in button
+    bot.send_document(chat_id=chat_id,document=open(enviar_chat, 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/PF/joao.jptr/Projetos/relogio-ponto/Planilhas/751466444/2/folhaPonto.csv'
+2019-02-21 10:30:48,844 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/home/PF/joao.jptr/.local/lib/python3.5/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/home/PF/joao.jptr/.local/lib/python3.5/site-packages/telegram/ext/callbackqueryhandler.py", line 143, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "teste.py", line 31, in command_func
+    return func(bot, update, **kwargs)
+  File "teste.py", line 94, in button
+    ponto='{}'.format(date.today()), '{}'.format(entrada), '{}'.format(saida)
+UnboundLocalError: local variable 'entrada' referenced before assignment
+  File "teste.py", line 85
+    global entrada='{}:{}'.format(now.hour, now.minute)
+                  ^
+SyntaxError: invalid syntax
+  File "teste.py", line 85
+    global entrada='{}:{}'.format(now.hour, now.minute)
+                  ^
+SyntaxError: invalid syntax
