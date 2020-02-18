@@ -30,11 +30,11 @@ def send_typing_action(func):
 
 @send_typing_action
 def ponto(bot, update):
-  keyboard = [[InlineKeyboardButton("Entrada triste", callback_data='1')],
-                 [InlineKeyboardButton("Saida feliz", callback_data='2')],
+  keyboard = [[InlineKeyboardButton("Entrada", callback_data='1')],
+                 [InlineKeyboardButton("Saida", callback_data='2')],
                 [InlineKeyboardButton("Ultimo dia no mês", callback_data='3')]]
   reply_markup = InlineKeyboardMarkup(keyboard)
-  update.message.reply_text('Qual foi menó manda o papo reto:', reply_markup=reply_markup)
+  update.message.reply_text('Ponto:', reply_markup=reply_markup)
 
 @send_typing_action
 def button(bot, update):
